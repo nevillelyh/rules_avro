@@ -12,24 +12,24 @@ def _commonprefix(m):
 def avro_repositories():
   # for code generation
   native.maven_jar(
-      name = "org_apache_avro_avro_tools",
-      artifact = "org.apache.avro:avro-tools:1.8.1",
-      sha1 = "361c32d4cad8dea8e5944d588e7d410f9f2a7114",
+      name = "rules_org_apache_avro_avro_tools",
+      artifact = "org.apache.avro:avro-tools:1.8.2",
+      sha1 = "3d7fc385972dc488d80281d68ccbf5396ec1f9ed",
   )
   native.bind(
       name = 'io_bazel_rules_avro/dependency/avro_tools',
-      actual = '@org_apache_avro_avro_tools//jar',
+      actual = '@rules_org_apache_avro_avro_tools//jar',
   )
 
   # for code compilation
   native.maven_jar(
-      name = "org_apache_avro_avro",
-      artifact = "org.apache.avro:avro:1.8.1",
-      sha1 = "f4e11d00055760dca33daab193192bd75cc87b59",
+      name = "rules_org_apache_avro_avro",
+      artifact = "org.apache.avro:avro:1.8.2",
+      sha1 = "91e3146dfff4bd510181032c8276a3a0130c0697",
   )
   native.bind(
       name = 'io_bazel_rules_avro/dependency/avro',
-      actual = '@org_apache_avro_avro//jar',
+      actual = '@rules_org_apache_avro_avro//jar',
   )
 
 
